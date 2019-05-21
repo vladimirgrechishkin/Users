@@ -18,6 +18,9 @@
 		78737AD52289F06900A08EFC /* PayloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78737AD42289F06900A08EFC /* PayloadProtocol.swift */; };
 		78737AD72289F39E00A08EFC /* NewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78737AD62289F39E00A08EFC /* NewEntry.swift */; };
 		78737AD92289FD8700A08EFC /* AddNewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78737AD82289FD8700A08EFC /* AddNewEntryViewController.swift */; };
+		D5CE59AB229481D20018D2DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE59AA229481D10018D2DE /* Extensions.swift */; };
+		D5CE59AD2294824F0018D2DE /* DetailEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE59AC2294824F0018D2DE /* DetailEntryViewController.swift */; };
+		D5CE59AF2294828F0018D2DE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE59AE2294828F0018D2DE /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		78737AD42289F06900A08EFC /* PayloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadProtocol.swift; sourceTree = "<group>"; };
 		78737AD62289F39E00A08EFC /* NewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntry.swift; sourceTree = "<group>"; };
 		78737AD82289FD8700A08EFC /* AddNewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntryViewController.swift; sourceTree = "<group>"; };
+		D5CE59AA229481D10018D2DE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = User/Extensions.swift; sourceTree = SOURCE_ROOT; };
+		D5CE59AC2294824F0018D2DE /* DetailEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailEntryViewController.swift; path = User/DetailEntryViewController.swift; sourceTree = SOURCE_ROOT; };
+		D5CE59AE2294828F0018D2DE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,8 @@
 				78737AD22289E9EB00A08EFC /* Session.swift */,
 				78737AD42289F06900A08EFC /* PayloadProtocol.swift */,
 				78737AD62289F39E00A08EFC /* NewEntry.swift */,
+				D5CE59AA229481D10018D2DE /* Extensions.swift */,
+				D5CE59AC2294824F0018D2DE /* DetailEntryViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				78737AD02289E9A300A08EFC /* NetworkManager.swift */,
+				D5CE59AE2294828F0018D2DE /* Reachability.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -169,11 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CE59AD2294824F0018D2DE /* DetailEntryViewController.swift in Sources */,
 				78737AD52289F06900A08EFC /* PayloadProtocol.swift in Sources */,
+				D5CE59AB229481D20018D2DE /* Extensions.swift in Sources */,
 				78737AD32289E9EB00A08EFC /* Session.swift in Sources */,
 				78737ACD2289E88C00A08EFC /* EntrySet.swift in Sources */,
 				78737ABD2289DF3500A08EFC /* MainTableViewController.swift in Sources */,
 				78737AD72289F39E00A08EFC /* NewEntry.swift in Sources */,
+				D5CE59AF2294828F0018D2DE /* Reachability.swift in Sources */,
 				78737AD12289E9A300A08EFC /* NetworkManager.swift in Sources */,
 				78737AD92289FD8700A08EFC /* AddNewEntryViewController.swift in Sources */,
 				78737ABB2289DF3500A08EFC /* AppDelegate.swift in Sources */,

@@ -13,5 +13,6 @@ protocol PayloadProtocol: Codable {
     associatedtype Payload
     
     var status: Int { get }
+    var error: String? { get }
     
 }

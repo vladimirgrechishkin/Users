@@ -12,29 +12,36 @@ class AddNewEntryViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     
+    private let nm = NetworkManager(token: "cRStQ3u-Oo-XLAH708")
+    
+    var sessionId: String?
+    
     @IBAction func acceptTapped(_ sender: UIButton) {
-        print("accept")
+        if let id = sessionId {
+            performNetworkFlow {
+                if let inputText = textView.text {
+                    nm.addEntry(body: inputText, sessionId: id, onSuccess: { [unowned self] (entry)  in
+                        if entry.error == nil {
+                            DispatchQueue.main.async {
+                                self.showAlert(title: "Success", message: "Entry created")
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                self.showAlert(title: "Failure", message: entry.error!)
+                            }
+                        }
+                    }) { (error) in
+                        DispatchQueue.main.async {
+                            self.showAlert(title: "Failure", message: "Problem in entry creation")
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func cancelTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

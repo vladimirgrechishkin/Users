@@ -11,7 +11,8 @@ import Foundation
 struct Session: PayloadProtocol {
     
     let status: Int
-    let data: Payload
+    let error: String?
+    let data: Payload?
         
     struct Payload: Codable {
         let session: String

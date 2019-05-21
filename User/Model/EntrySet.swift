@@ -11,7 +11,8 @@ import Foundation
 struct EntrySet: PayloadProtocol {
     
     let status: Int
-    let data: [Payload]
+    let error: String?
+    let data: [[Payload]]?
     
     struct Payload: Codable {
         let id: String
